@@ -1,0 +1,71 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.mainDiv {
+    height: 600px;
+    width: 600px;
+    background-color: cadetblue;
+    /*border-radius: 50%;*/
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.mainDiv > div {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid black;
+    box-sizing: border-box;
+}
+
+.red {
+    background-color: red;
+    position: relative;
+    animation-name: reed;
+    animation-duration: 5s;
+    animation-fill-mode: forwards; 
+}
+
+.yellow {
+    background-color: yellow;
+    display: block; 
+    transition-property: transform;
+    transition-duration: 5s;
+}
+
+.yellow:hover{
+    transform: rotateY(180deg);
+}
+
+.green {
+    background-color: green;
+    opacity: 0;
+    animation-name: greenn;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes reed{
+    100%{
+        top: 0px;
+    }
+    0%{
+        top: -200px;
+    }
+
+}
+
+@keyframes greenn{
+    100%{
+        opacity: 1;
+    }
+    0%{
+        opacity: 0;
+    }
+}
